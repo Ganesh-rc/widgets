@@ -47,7 +47,7 @@ const App = () => {
                 <Accordion items={items}/>
             </Route>
             <Route path='/list' >
-                <Search />;
+                <Search />
             </Route>
             <Route path='/dropdown' >
                 <Dropdown 
@@ -55,10 +55,10 @@ const App = () => {
                 options={options}
                 selected = {selected}
                 onSelectedChange={setSelected}
-                />;
+                />
             </Route>
             <Route path='/translate' >
-                <Translate />;
+                <Translate />
             </Route>
         </div>
 
@@ -66,15 +66,3 @@ const App = () => {
 };
 
 export default App;
-/*
-            <div>
-                <button onClick={() => setShowDropdown(!showDropdown)}>Toggle dropdown</button> 
-                {showDropdown ?
-                    <Dropdown 
-                    selected = {selected}
-                    onSelectedChange = {setSelected}
-                    options ={ options } 
-                /> : null
-            }
-            </div>  
-*/ 
