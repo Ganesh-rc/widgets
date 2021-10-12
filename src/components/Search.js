@@ -12,7 +12,6 @@ const Search = () => {
             console.log("I only run once or simply usecase1")
         }, [] // meaning usecase`1
     );
-    // console.log("another one"); // runs every time the app is rerendered
     /*
     Note: You cannot directly use async/await on function in useEffect parameters
     */
@@ -27,9 +26,9 @@ const Search = () => {
                 format: 'json',
                 srsearch: term,
             },} );
-            // console.log(term);
+
             setResults(data.query.search);
-        }; //(function)() is valid to run a function
+        }; 
         
         const timeoutId = setTimeout(() => {
             if(term){
@@ -40,7 +39,7 @@ const Search = () => {
         return () => {
             clearTimeout(timeoutId)
         };
-    },[ term ] // meaning usecase3 
+    },[ term ]
     );
 
     const renderedResults = results.map((result) => {
