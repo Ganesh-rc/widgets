@@ -3,10 +3,9 @@ import React, { useState } from 'react';
 const Accordion = ({items}) => {
     const [activeIndex, setActiveIndex] = useState(null);
     const onTitleClick = (index) => {
-        // console.log('Title clicked', index);
         setActiveIndex(index);
     };
-//en.wikipedia.org/w/api.php?action=query&list=search&format=json&srsearch=SEARCHTERM
+
     const renderedItems = items.map((item, index) => {
         const active = index === activeIndex ? 'active' : '';
         return(
