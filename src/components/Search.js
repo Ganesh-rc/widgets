@@ -2,19 +2,14 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
 const Search = () => {
-    // term state
     const [term, setTerm] = useState("State");
-    // console.log(term);
+
     const [results, setResults] = useState([]);
-    // console.log(results);
     useEffect(() =>
         {
             console.log("I only run once or simply usecase1")
-        }, [] // meaning usecase`1
+        }, [] 
     );
-    /*
-    Note: You cannot directly use async/await on function in useEffect parameters
-    */
     useEffect(() =>
     {
         const search = async () => {
